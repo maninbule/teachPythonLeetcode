@@ -11,14 +11,15 @@ def solve(n:int)->list[int]:
     [5, 4, 0, 4, 5]
     '''
     arr = [0] * n
-    left,right = 0,n-1
-    cur = n
-    while left < right:
-        arr[left] = arr[right] = cur
+    left = 0
+    right = n-1
+    while left <= right:
+        arr[left] = arr[right] = n
+        n -= 1
         left += 1
         right -= 1
-        cur -= 1
     return arr
+
 def solve2(n:int,m:int)->list[list[int]]:
     '''
     :param n: 矩阵的行数

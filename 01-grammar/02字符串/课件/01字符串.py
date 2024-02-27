@@ -61,3 +61,10 @@ def slice_string(s, start, end):
     ''
     """
     return s[start:end]
+
+if __name__ == '__main__':
+    s = "a-b-c"
+    b = s.split("-")
+    print(b[0])
+    print(b[1])
+    print(b[2])

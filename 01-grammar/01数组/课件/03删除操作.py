@@ -21,14 +21,14 @@ def pop_last_element(arr:list):
     >>> pop_last_element(['a', 'b', 'c', 'd', 'e'])
     'e'
     """
-
+    # 等同arr.pop(len(arr)-1)
     return arr.pop()
 
 def get_sublist(arr:list, start:int, end:int):
     """
     Get a sublist from the list based on start and end indices.
 
-    >>> get_sublist([1, 2, 3, 4, 5], 1, 3)
+    >>> get_sublist([1, 2, 3, 4, 5], 1, 3) # [1,2,3)->[1,2]
     [2, 3]
 
     >>> get_sublist(['a', 'b', 'c', 'd', 'e'], 0, 3)
@@ -37,6 +37,11 @@ def get_sublist(arr:list, start:int, end:int):
     return arr[start:end]
 
 if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+    # import doctest
+    # doctest.testmod()
+
+    arr = [1,2,3,4,5,6,7]
+    print(arr[1:6:2])
+
+
 

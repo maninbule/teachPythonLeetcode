@@ -2,7 +2,7 @@
 
 def sum_numbers_in_string(s):
     """
-    求出字符串里面出现的数，数与数之间用的空格隔开
+    求出字符串里面出现的数的和，数与数之间用的空格隔开
 
     >>> sum_numbers_in_string('12 34 88 90')
     224
@@ -11,6 +11,8 @@ def sum_numbers_in_string(s):
     >>> sum_numbers_in_string('10 20 30')
     60
     """
+
+
 
 
 

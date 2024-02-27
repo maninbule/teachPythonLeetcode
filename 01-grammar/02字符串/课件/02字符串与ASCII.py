@@ -2,6 +2,7 @@
 常用的两个函数是：
 字符转ascii码： ascii = ord('a')
 ascii码转字符： c = chr(ascii)
+
 什么是ASCII
 计算机是以数字形式存储一切数据的，那么我们就想要知道字符是怎么样存储的。
 其实在计算机中是把字符做了一个映射，把常见的字符都映射成了0~127了，我们只管常见的字符是怎么编码的就好，不常用的字符我们就不去了解。
@@ -43,7 +44,6 @@ def asciiToChar(c:str)->str:
 一般这种只会作为哈希表的优化来考察
 '''
 
-
 def charToASCII(s:str)->str:
     '''
     >>> charToASCII('hello')
@@ -67,4 +67,11 @@ def charToASCII(s:str)->str:
         if cnt[ascii] > 0:
             ans += " " + chr(ascii) + " " + str(cnt[ascii])
     return ans
+
+
+if __name__ == '__main__':
+
+    print(ord('a'))
+
+    print(chr(98))
 

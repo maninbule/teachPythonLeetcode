@@ -11,8 +11,11 @@ def sum_numbers_in_string(s):
     >>> sum_numbers_in_string('10 20 30')
     60
     """
-    numbers = [int(num) for num in s.split()]
-    return sum(numbers)
+    result = s.split(" ")  # ['12','34','88','90']
+    sum = 0
+    for s in result:
+        sum += int(s)
+    return sum
 
 
 
