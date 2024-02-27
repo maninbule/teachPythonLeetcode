@@ -24,11 +24,7 @@ def solve2(n:int,m:int)->list[list[int]]:
     >>> solve2(4,1)
     [[0], [1], [2], [3]]
     '''
-    arr = [[0] * m for i in range(n)]
-    for i in range(n):
-        for j in range(m):
-            arr[i][j] = i + j
-    return arr
+
 
 if __name__ == '__main__':
     print(solve2(4,1))
