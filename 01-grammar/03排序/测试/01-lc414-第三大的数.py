@@ -6,4 +6,12 @@ url:https://leetcode.cn/problems/third-maximum-number/description/
 '''
 class Solution:
     def thirdMax(self, nums: List[int]) -> int:
-        pass
+        st = set(nums)
+        nums = list(st)
+        nums.sort(reverse=True)
+        if len(nums) >= 3:
+            return nums[2]
+        else:
+            return nums[0]
+        
+            

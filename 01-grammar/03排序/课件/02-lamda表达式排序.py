@@ -7,7 +7,7 @@ def sort_ascending(arr):
     >>> sort_ascending([1, 67, 2, 1, 4, 5, 90, 23])
     [1, 1, 2, 4, 5, 23, 67, 90]
     """
-    arr.sort(key=lambda x: x)
+    arr.sort(key=lambda x: x) # 从小到大排序
     return arr
 
 def sort_descending(arr):
@@ -17,7 +17,7 @@ def sort_descending(arr):
     >>> sort_descending([1, 67, 2, 1, 4, 5, 90, 23])
     [90, 67, 23, 5, 4, 2, 1, 1]
     """
-    arr.sort(key=lambda x: -x)
+    arr.sort(key=lambda item: -item) # 从大到小排序
     return arr
 
 def sort_tuple_ascending(lst):

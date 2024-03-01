@@ -7,5 +7,5 @@ def traverse_set(my_set):
         print(item)
 
 if __name__ == "__main__":
-    my_set = {1, 2, 3, 4, 5}
+    my_set = {1, 4, 3, 5, 2}
     traverse_set(my_set)

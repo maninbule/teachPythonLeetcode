@@ -25,7 +25,10 @@ def set_operations():
     else:
         print("2 not in my_set")
 
+    A = [1,2,3,3,4]
+    st = set(A) # 把list转换成set，set自动去重
 
+    L = list(st) # 把set转换成list
 
 if __name__ == '__main__':
     set_operations()
