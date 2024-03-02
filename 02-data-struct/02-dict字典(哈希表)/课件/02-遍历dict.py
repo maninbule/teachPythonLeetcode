@@ -19,3 +19,13 @@ def trverseDict():
 
 if __name__ == '__main__':
     trverseDict()
+
+    s = ["wrold","wrold","abc","abc","def"]
+    mp = dict()
+    for word in s:
+        if word not in mp:
+            mp[word] = 1
+        else:
+            mp[word] += 1
+    print(mp)
+

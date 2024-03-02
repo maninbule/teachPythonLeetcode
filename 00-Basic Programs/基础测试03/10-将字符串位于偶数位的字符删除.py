@@ -8,9 +8,14 @@
 '''
 
 def removeEvenChar(s:str)->str:
-    pass
+    ans = ""
+    for i in range(len(s)):
+        if i % 2 == 0:
+            ans += s[i]
+    return ans
 
 assert removeEvenChar("abcd") == 'ac'
 assert removeEvenChar("abc") == 'ac'
 assert removeEvenChar("ab") == 'a'
 assert removeEvenChar("a") == 'a'
+print("pass")

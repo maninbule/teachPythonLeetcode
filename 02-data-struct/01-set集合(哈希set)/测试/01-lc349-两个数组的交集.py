@@ -6,4 +6,10 @@ from typing import List
 
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        pass
+        st1 = set(nums1)
+        st2 = set(nums2)
+        ans = []
+        for item in st1: # 一个一个取
+            if item in st2: # 在一堆数里面查询item里面在不在
+                ans.append(item)
+        return ans

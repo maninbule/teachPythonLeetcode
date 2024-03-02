@@ -19,7 +19,7 @@ def defaultInt():
     print(d['a'])  # 输出：0
 
     d['a'] += 1
-    print(d['a'])
+    print(d['a']) # 输出： 1
 
 def defaultString():
     '''

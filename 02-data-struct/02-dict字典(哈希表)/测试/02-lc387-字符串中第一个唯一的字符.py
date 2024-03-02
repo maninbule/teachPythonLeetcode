@@ -6,4 +6,12 @@ from typing import List
 
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        pass
+        from collections import defaultdict
+        mp = defaultdict(int)
+        for c in s:
+            mp[c] += 1
+        for i in range(len(s)):
+            c = s[i]
+            if mp[c] == 1:
+                return i
+        return -1
