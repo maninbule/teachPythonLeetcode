@@ -14,8 +14,8 @@ def PriorityQueue_node():
 
     pq = PriorityQueue()
     # 入队操作
-    pq.put(Node(3,2,'banana'))
-    pq.put(Node(3, 2, 'banana'))
+    pq.put(Node(3,2,'banana1'))
+    pq.put(Node(3, 1, 'banana2'))
     pq.put(Node(2, 3, 'orange'))
 
     # 查询队列元素个数
@@ -30,3 +30,5 @@ def PriorityQueue_node():
     # 再次查询队列元素个数
     size = pq.qsize()
     print("队列中的元素个数:", size)  # 输出：队列中的元素个数: 0
+
+PriorityQueue_node()
