@@ -4,7 +4,6 @@ url:https://leetcode.cn/problems/longest-common-prefix/description/
 '''
 from typing import List
 
-
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         pre = ""
