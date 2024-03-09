@@ -7,4 +7,6 @@ from typing import List
 
 class Solution:
     def distributeCandies(self, candyType: List[int]) -> int:
-        pass
+        can = len(candyType)//2
+        uniques = len(set(candyType))
+        return min(can,uniques)

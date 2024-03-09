@@ -7,4 +7,5 @@ from typing import List
 
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        pass
+        nums.sort()
+        return nums[len(nums)//2]
