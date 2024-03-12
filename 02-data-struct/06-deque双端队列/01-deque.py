@@ -17,10 +17,8 @@ dq = deque()
 dq.append(1)
 dq.append(2)
 dq.append(3)
-
 # 从左端添加元素
 dq.appendleft(0)
-
 # 打印双端队列的内容和长度
 print("Deque:", dq)
 print("Length:", len(dq))
