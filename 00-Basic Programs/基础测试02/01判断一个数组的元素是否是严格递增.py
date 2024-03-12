@@ -6,7 +6,6 @@ A = [1,2,3,4]  A[i] < A[i+1]  0<=i < len(A)-1
                A[0] A[1]
                A[1] A[2]
                A[2] A[3]
-
 '''
 def judge(arr:list[int])->bool:
     for i in range(0,len(arr)-1):

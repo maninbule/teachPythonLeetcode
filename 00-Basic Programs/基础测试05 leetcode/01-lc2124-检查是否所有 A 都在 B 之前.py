@@ -1,4 +1,3 @@
-
 '''
 url: https://leetcode.cn/problems/check-if-all-as-appears-before-all-bs/description/
 '''

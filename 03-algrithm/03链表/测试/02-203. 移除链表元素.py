@@ -14,4 +14,17 @@ class ListNode:
         self.next = next
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
-        pass
+        dummy = ListNode()
+        tail = dummy
+        cur = head
+        while cur is not None:
+            next = cur.next
+            if cur.val != val:
+                tail.next = cur # 当前cur是要保留的节点p1,这句话，直接把P1放在新链表尾巴了
+                tail = tail.next
+                tail.next = None
+            cur = next
+        return dummy.next
+
+
+

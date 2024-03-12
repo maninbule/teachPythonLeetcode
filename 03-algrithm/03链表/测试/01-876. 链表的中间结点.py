@@ -13,4 +13,18 @@ class ListNode:
         self.next = next
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        pass
+        cur = head
+        cnt = 0
+        while cur is not None:
+            cnt += 1
+            cur = cur.next
+        middle = cnt//2
+        cur = head      # 0 -> middle
+        for _ in range(middle):
+            cur = cur.next
+        return cur
+
+
+
+
+
