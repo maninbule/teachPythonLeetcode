@@ -9,3 +9,7 @@ def sorting_connection(list_1: list, list_2: list) -> list:
     :return: Sorting the list after merging
     '''
     # -- write your code here --
+    for x in list_2:
+        list_1.append(x)
+    list_1.sort()
+    return list_1

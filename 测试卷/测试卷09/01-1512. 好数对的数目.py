@@ -3,7 +3,6 @@ https://leetcode.cn/problems/number-of-good-pairs/description/?envType=study-pla
 '''
 from typing import List
 
-
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         pass
