@@ -4,4 +4,15 @@ https://leetcode.cn/problems/number-of-different-integers-in-a-string/descriptio
 
 class Solution:
     def numDifferentIntegers(self, word: str) -> int:
-        pass
+        s = ""
+        for c in word:
+            if c.isalpha():
+                s += ' '
+            else:
+                s += c
+        arr = s.split()
+        st = set()
+        for x in arr:
+            x = int(x)
+            st.add(x)
+        return len(st)
