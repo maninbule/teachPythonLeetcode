@@ -17,11 +17,11 @@
             for x in arr:
                 sum += 1
 # (6) 写一个循环，从字母a遍历到字母z，并打印出来
-            for i in range(ord('a'),ord('z'))
+            for i in range(ord('a'),ord('z') + 1)
                 print(i)
 # (7) 将一个字符串s，转换成int类型
-                s = "123"
-                ans = int(s)
+            s = "123"
+            ans = int(s)
 # (8) 判断x是否是y的倍数，是的话，输出yes，如果不是输出no
         x= 15
         y =5
