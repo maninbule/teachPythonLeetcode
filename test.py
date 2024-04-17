@@ -1,6 +1,7 @@
 
 
-arr = ["app","apple","hello","abc","d"]
-arr.sort(key=lambda x:(len(x),x))
-print(arr)
 
+s = "abcabcabc"
+s = list(s)
+s.sort()
+print("".join(s))
