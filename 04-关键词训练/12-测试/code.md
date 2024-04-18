@@ -14,7 +14,6 @@
             if value == 1:
                 ans.append(key)
         return ans
-    
     # 测试
     input = ["a","b","b","c","d","c"] # output: ["a","d"]
     print(find_unique_string(input))
