@@ -2,20 +2,17 @@
 
 
 
-
-# defaultdict key:int, value:list[str]
-def solve(arr:list[str])->list[str]:
-    from collections import defaultdict
-    mp = defaultdict(list[str])
-    for s in arr:
-        mp[len(s)].append(s)
-    ans = []
-    for key,value in mp.items(): # value = list[str]
-        ans.append("".join(value))
-    ans.sort(key=lambda x:len(x))
-    return ans
+def solve(arr:list[int])->int:
+    st = set()
+    for i in range(len(arr)):
+        for j in range(len(arr)):
+            for k in range(len(arr)):
+                if i != j and j != k and i != k:
+                    if arr[i] + arr[j] == arr[k]:
+                        st.add((arr[i],arr[j],arr[k]))
+    return len(st)
 
 # 测试
-input = ['a','b','abc','xyz','d']
-# output = ['abd','abcxyz']
-print(solve(input))
+arr = [2,2,2,1,3,4]
+print(solve(arr)) # 5  (2,2,4),(1,3,4),(3,1,4),(1,2,3),(2,1,3)
+
