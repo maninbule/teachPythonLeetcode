@@ -20,7 +20,23 @@
     例如：输入: ["123","ab","afsggg","2224"] 输出["2","","fsgg","22"]
 
 # (8) 给你一个字符串s，输出里面哪个字符出现的次数最多
-
-# (9) 给你一个list[list[int]],输出里面最大的int
+    def solve(s:str)->str:
+        from collections import defaultdict
+        cnt = defaultdict(int)
+        for c in s:
+            cnt[c] += 1
+        ans_char = s[0]
+        for char,times in cnt.items():
+            if times > cnt[ans_char]:
+                ans_char = char
+        return ans_char
+    
+    # 测试
+    s = "abbbcccc" # out = c
+    print(solve(s))
+    s = "abbbccc" # out = b or c
+    print(solve(s))
+# (9) 给你一个list[list[int]],输出里面最大的list[int]的最大值
+    # 输入[[1,2,3],[2,5,6],[1,4,2]] ->输出[3,6,4]
 
 # (10) 给你一个list[list[int]],保证一定是个方阵，请你将所有对角线元素相加求和并输出
