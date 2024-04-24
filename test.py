@@ -1,20 +1,10 @@
+from functools import cache
+import sys
+sys.setrecursionlimit(10000)  # 设置最大递归次数为10000
+@cache
+def fib(n:int )->int:
+    if n == 0 or n == 1:
+        return 1
+    return fib(n-1) + fib(n-2) # fib(n) -> res
 
-
-
-def solve(s:str)->str:
-    ans = ""
-    cur = ""
-    for c in s:
-        if c.isalpha():
-            cur += c
-        else:
-            if len(cur) > 0:
-                ans += cur[::-1]
-                cur = ""
-            ans += c
-    if len(cur) > 0:
-        ans += cur[::-1]
-    return ans
-
-s = "hello   world code" # output: olleh   dlrow edoc
-print(solve(s))
+print(fib(1000))
