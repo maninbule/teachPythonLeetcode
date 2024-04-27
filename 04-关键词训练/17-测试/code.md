@@ -10,6 +10,28 @@
         [[11,12],
         [15,16]]
 
+
+
+    def solve(arr:list[list[int]])->list[list[int]]:
+        n = len(arr)
+        ans = [[0] * (n-2) for i in range(n-2)]
+        for i in range(len(arr)):
+            for j in range(len(arr)):
+                # i i + 2,j,j + 2
+                if i + 2 >= len(arr) or j + 2 >= len(arr[i]):
+                    break
+                mx = arr[i][j]
+                for x in range(i,i + 3):
+                    for y in range(j,j + 3):
+                        mx = max(mx,arr[x][y])
+                ans[i][j] = mx
+        return ans
+    
+    input = [[1,2,3,4],
+            [5,6,7,8],
+            [9,10,11,12],
+            [13,14,15,16]]
+    print(solve(input))
 # (2) 请使用栈来完成list[int]的翻转功能，(栈可以用list来实现)
 
 # (3) 请使用栈来完成字符串s的翻转功能，(栈可以用list来实现)
@@ -34,5 +56,21 @@
         ((()) ->false
 # (10) 给你一个由字母和空格组成的字符串，请把其中的字母变成大小写交替(先大写)的形式，空格不变,
     例子："ab cA d  " ->"Ab Ca D  "
+    def solve(s:str)->str:
+        cnt = 0
+        ans = ""
+        for c in s:
+            if c == ' ':
+                ans += c
+            else:
+                cnt += 1
+                if cnt%2 == 1:
+                    ans += c.upper()
+                else:
+                    ans += c.lower()
+        return ans
+    
+    input = "ab cA d  "
+    print(solve(input))
 
     

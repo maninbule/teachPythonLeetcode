@@ -12,7 +12,6 @@ from collections import deque
 
 # 创建双端队列
 dq = deque()
-
 # 从右端添加元素
 dq.append(1)
 dq.append(2)

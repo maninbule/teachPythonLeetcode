@@ -1,10 +1,21 @@
-from functools import cache
-import sys
-sys.setrecursionlimit(10000)  # 设置最大递归次数为10000
-@cache
-def fib(n:int )->int:
-    if n == 0 or n == 1:
-        return 1
-    return fib(n-1) + fib(n-2) # fib(n) -> res
 
-print(fib(1000))
+
+
+# "ab cA d  " ->"Ab Ca D  "
+
+def solve(s:str)->str:
+    cnt = 0
+    ans = ""
+    for c in s:
+        if c == ' ':
+            ans += c
+        else:
+            cnt += 1
+            if cnt%2 == 1:
+                ans += c.upper()
+            else:
+                ans += c.lower()
+    return ans
+
+input = "ab cA d  "
+print(solve(input))
