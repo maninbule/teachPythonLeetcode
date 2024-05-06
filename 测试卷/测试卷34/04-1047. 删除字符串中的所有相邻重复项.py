@@ -4,4 +4,10 @@ https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/descriptio
 
 class Solution:
     def removeDuplicates(self, s: str) -> str:
-        pass
+        sk = []
+        for c in s:
+            if len(sk) > 0 and sk[-1] == c:
+                sk.pop()
+            else:
+                sk.append(c)
+        return "".join(sk)

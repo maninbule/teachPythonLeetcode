@@ -6,4 +6,13 @@ from typing import List
 
 class Solution:
     def findTheDistanceValue(self, arr1: List[int], arr2: List[int], d: int) -> int:
-        pass
+        ans = 0
+        for x in arr1:
+            flag = True
+            for y in arr2:
+                if abs(x - y) <= d:
+                    flag = False
+                    break
+            if flag:
+                ans += 1
+        return ans
