@@ -15,12 +15,3 @@ class Solution:
         for x in point:
             cnt += x
         return cnt
-
-class Solution:
-    def numberOfPoints(self, nums: List[List[int]]) -> int:
-        point = [0] * 105
-        for L in nums:
-            l,r = L
-            for j in range(l,r + 1):
-                point[j] = 1
-        return sum(point)
