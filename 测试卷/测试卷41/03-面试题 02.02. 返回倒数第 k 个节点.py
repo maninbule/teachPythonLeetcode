@@ -10,4 +10,12 @@ class ListNode:
 
 class Solution:
     def kthToLast(self, head: ListNode, k: int) -> int:
-        pass
+        n = 0
+        cur = head
+        while cur is not None:
+            n += 1
+            cur = cur.next
+        cur = head
+        for i in range(n-k):
+            cur = cur.next
+        return cur

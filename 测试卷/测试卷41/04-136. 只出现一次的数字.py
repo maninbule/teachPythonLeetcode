@@ -6,4 +6,7 @@ from typing import List
 
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:
-        pass
+        ans = 0
+        for v in nums:
+            ans ^= v
+        return ans
