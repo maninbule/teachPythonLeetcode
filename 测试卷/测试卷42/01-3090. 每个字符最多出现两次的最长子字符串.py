@@ -3,17 +3,21 @@
 
 class Solution:
     def maximumLengthSubstring(self, s: str) -> int:
+        j = 0
         from collections import defaultdict
+        cnt = defaultdict(int)
         ans = 0
-        for i in range(len(s)):
-            cnt = defaultdict(int)
-            for j in range(i,len(s)):
+        for i in range(len(s)): # 0 - n-1
+            while j < len(s) and cnt[s[j]] + 1 <= 2:
                 cnt[s[j]] += 1
-                if cnt[s[j]] > 2:
-                    break
-                else:
-                    ans = max(ans,j - i + 1)
+                j += 1
+            ans = max(ans,j - i)
+            cnt[s[i]] -= 1
         return ans
+
+
+
+
 
 
 
