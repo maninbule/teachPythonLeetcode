@@ -12,4 +12,10 @@ class TreeNode:
         self.right = right
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        pass
+        if root is None:
+            return 0
+        return 1 + max(self.maxDepth(root.left),self.maxDepth(root.right))
+
+# maxDepth(root)->计算root节点二叉树的高度
+
+# 1 + max(root左子树的高度，root右子树的高度)
