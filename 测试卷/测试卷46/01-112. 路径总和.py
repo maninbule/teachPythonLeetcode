@@ -12,4 +12,18 @@ class TreeNode:
         self.right = right
 class Solution:
     def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
-        pass
+        if root is None:
+            return False
+        ok = [False] # ok[0] = True
+        def dfs(cur_node,prefixsum:int):
+            if cur_node.left is None and cur_node.right is None:
+                if prefixsum == targetSum:
+                    ok[0] = True
+                return
+            if cur_node.left is not None:
+                dfs(cur_node.left,prefixsum + cur_node.left.val)
+            if cur_node.right is not None:
+                dfs(cur_node.right,prefixsum + cur_node.right.val)
+        dfs(root,root.val)
+        return ok[0]
+
