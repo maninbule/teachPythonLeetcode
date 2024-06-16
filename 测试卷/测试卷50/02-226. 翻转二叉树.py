@@ -3,7 +3,6 @@ https://leetcode.cn/problems/invert-binary-tree/description/
 '''
 from typing import Optional
 
-
 # Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -12,4 +11,11 @@ class TreeNode:
         self.right = right
 class Solution:
     def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-        pass
+        def dfs(root):
+            if root is None:
+                return
+            root.left,root.right = root.right,root.left
+            dfs(root.left)
+            dfs(root.right)
+        dfs(root)
+        return root
