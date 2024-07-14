@@ -12,4 +12,22 @@ class TreeNode:
         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> list[list[int]]:
-        pass
+        if root is None:
+            return []
+        from collections import deque
+        q = deque()
+        res = []
+        q.append(root)
+        while len(q) > 0:
+            size = len(q)
+            cur_level = []
+            for i in range(size):
+                cur = q.popleft()
+                cur_level.append(cur.val)
+                if cur.left is not None:
+                    q.append(cur.left)
+                if cur.right is not None:
+                    q.append(cur.right)
+            res.append(cur_level)
+        return res
+
