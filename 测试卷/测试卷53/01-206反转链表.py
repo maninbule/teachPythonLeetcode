@@ -1,9 +1,8 @@
 '''
 https://leetcode.cn/problems/reverse-linked-list/
 '''
-
+# 头插法
 from typing import Optional
-
 
 # Definition for singly-linked list.
 class ListNode:
@@ -12,4 +11,11 @@ class ListNode:
         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        pass
+        dummy = ListNode(0)
+        curNode = head
+        while curNode:
+            nextNode = curNode.next
+            curNode.next = dummy.next
+            dummy.next = curNode
+            curNode = nextNode
+        return dummy.next
