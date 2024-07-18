@@ -12,4 +12,12 @@ class TreeNode:
         self.right = right
 class Solution:
     def preorderTraversal(self, root: Optional[TreeNode]) -> list[int]:
-        pass
+        ans = []
+        def dfs(curNode):
+            ans.append(curNode)
+            if curNode.left:
+                dfs(curNode.left)
+            if curNode.right:
+                dfs(curNode.right)
+        dfs(root)
+        return ans

@@ -10,4 +10,16 @@ class ListNode:
 
 class Solution:
     def removeDuplicateNodes(self, head: ListNode) -> ListNode:
-        pass
+        st = set()
+        dummy = ListNode(0)
+        tail = dummy
+        curNode = head
+        while curNode:
+            nextNode = curNode.next
+            if curNode.val not in st:
+                st.add(curNode.val)
+                tail.next = curNode
+                tail = tail.next
+                tail.next = None
+            curNode = nextNode
+        return dummy.next
