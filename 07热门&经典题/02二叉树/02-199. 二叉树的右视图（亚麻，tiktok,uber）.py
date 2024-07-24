@@ -1,7 +1,7 @@
 '''
-https://leetcode.cn/problems/same-tree/description/
+https://leetcode.cn/problems/binary-tree-right-side-view/description/
 '''
-from typing import Optional
+from typing import Optional, List
 
 
 # Definition for a binary tree node.
@@ -11,5 +11,5 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
         pass

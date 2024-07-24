@@ -1,5 +1,5 @@
 '''
-https://leetcode.cn/problems/balanced-binary-tree/description/
+https://leetcode.cn/problems/symmetric-tree/
 '''
 from typing import Optional
 
@@ -11,5 +11,5 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
         pass
