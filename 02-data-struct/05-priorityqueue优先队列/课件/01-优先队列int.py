@@ -27,5 +27,5 @@ def PriorityQueue_int():
     # 再次查询队列元素个数
     size = pq.qsize()
     print("队列中的元素个数:", size)  # 输出：队列中的元素个数: 0
-
+PriorityQueue_int()
 
