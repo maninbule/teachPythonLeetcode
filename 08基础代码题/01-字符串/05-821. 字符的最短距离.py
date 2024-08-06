@@ -31,4 +31,5 @@ class Solution:
                 last = i
             if last != -1:
                 ans[i] = min(ans[i], last - i)
+        "abc".startswith()
         return ans
