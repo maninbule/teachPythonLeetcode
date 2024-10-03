@@ -16,3 +16,4 @@ def deleteFromArray(arr:list[int],x:int)->list[int]:
     return ans
 
 print(deleteFromArray([1,3,3,5,6],3))
+
