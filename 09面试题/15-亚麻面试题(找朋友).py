@@ -54,7 +54,6 @@ def bfs(a:Person,b:Person)->int:
             visited.add(friend)
     return -1
 
-
 a = Person('a')
 b = Person('b')
 c = Person('c')
